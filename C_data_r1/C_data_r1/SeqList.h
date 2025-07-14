@@ -24,11 +24,20 @@ void SLPushBack(SL* ps, SLDataType x);
 //头插
 void SLPushFront(SL* ps,SLDataType x);
 
+//指定位置之前插入
+void SLInsert(SL* ps,int pos,SLDataType x);
+
+//删除指定位置的数据
+void SLErase(SL* ps,int pos);
+
 //尾删
 void SLPopBack(SL* ps);
 
 //头删
 void SLPopFront(SL* ps);
+
+//查找
+int SLFind(SL* ps,SLDataType x);
 
 //打印
 void SLPrint(SL s);

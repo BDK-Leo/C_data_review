@@ -46,6 +46,32 @@ void SLPushFront(SL* ps, SLDataType x)
 	ps->size++;
 }
 
+//指定位置之前插入
+void SLInsert(SL* ps, int pos, SLDataType x)
+{
+	assert(ps);
+	assert(pos >= 0 && pos <= ps->size);
+	SLCheakCapacity(ps);
+	for (int i = ps->size;i > pos;i--)
+	{
+		ps->arr[i] = ps->arr[i - 1];
+	}
+	ps->arr[pos] = x;
+	ps->size++;
+}
+
+//删除指定位置的数据
+void SLErase(SL* ps, int pos)
+{
+	assert(ps);
+	assert(pos >= 0 && pos < ps->size);
+	for (int i = pos;i < ps->size - 1;i++)
+	{
+		ps->arr[i] = ps->arr[i + 1];
+	}
+	ps->size--;
+}
+
 //尾删
 void SLPopBack(SL* ps)
 {
@@ -64,6 +90,20 @@ void SLPopFront(SL* ps)
 		ps->arr[i] = ps->arr[i+1];
 	}
 	ps->size--;
+}
+
+//查找
+int SLFind(SL* ps, SLDataType x)
+{
+	assert(ps);
+	for (int i = 0;i < ps->size;i++)
+	{
+		if (ps->arr[i] == x)
+		{
+			return i;
+		}
+	}
+	return -1;
 }
 
 //打印

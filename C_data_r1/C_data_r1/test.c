@@ -17,14 +17,31 @@ void Test01()
 	//头插
 	SLPushFront(&sl,0);
 	SLPushFront(&sl,-1);
+
+	//指定位置之前插入
+	SLInsert(&sl,sl.size,6);
 	SLPrint(sl);
+
+	//删除指定位置的数据
+	//SLErase(&sl, sl.size - 1);
+	//SLPrint(sl);
 
 	//尾删
-	SLPopBack(&sl);
+	//SLPopBack(&sl);
 
 	//头删
-	SLPopFront(&sl);
-	SLPrint(sl);
+	//SLPopFront(&sl);
+
+	//查找
+	int Find = SLFind(&sl,6);
+	if (Find < 0)
+	{
+		printf("没找到!\n");
+	}
+	else
+	{
+		printf("下标为：%d\n",Find);
+	}
 
 	//销毁
 	SLDestroy(&sl);
