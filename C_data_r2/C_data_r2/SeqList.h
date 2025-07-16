@@ -21,7 +21,7 @@ void SLPushFront(SL* ps,SLDataType x);
 //尾插
 void SLPushBack(SL* ps, SLDataType x);
 
-//指定为之前插入
+//指定位置之前插入
 void SLPushInsert(SL* ps,int pos,SLDataType x);
 
 //头删
