@@ -2,8 +2,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
+#include"Contact.h"
 
-typedef int SLDataType;
+typedef peoInfo SLDataType;
 
 typedef struct SeqList
 {
@@ -30,11 +31,14 @@ void SLPopFront(SL* ps);
 //尾删
 void SLPopBack(SL* ps);
 
+//指定位置删除
+void SLErase(SL* ps, int pos);
+
 //查找
-int SLFind(SL* ps,SLDataType x);
+//int SLFind(SL* ps,SLDataType x);
 
 //打印
-void SLPrint(SL s);
+//void SLPrint(SL s);
 
 //销毁
 void SLDestroy(SL* ps);

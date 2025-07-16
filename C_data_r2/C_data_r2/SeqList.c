@@ -80,29 +80,42 @@ void SLPopBack(SL* ps)
 	ps->size--;
 }
 
-//查找
-int SLFind(SL* ps, SLDataType x)
+//指定位置删除
+void SLErase(SL* ps, int pos)
 {
 	assert(ps);
-	for (int i = 0;i < ps->size;i++)
+	assert(pos >= 0 && pos < ps->size);
+	SLCheckCapacity(ps);
+	for (int i = pos; i < ps->size - 1; i++)
 	{
-		if (ps->arr[i] == x)
-		{
-			return i;
-		}
+		ps->arr[i] = ps->arr[i + 1];
 	}
-	return -1;
+	ps->size--;
 }
 
+//查找
+//int SLFind(SL* ps, SLDataType x)
+//{
+//	assert(ps);
+//	for (int i = 0;i < ps->size;i++)
+//	{
+//		if (ps->arr[i] == x)
+//		{
+//			return i;
+//		}
+//	}
+//	return -1;
+//}
+
 //打印
-void SLPrint(SL s)
-{
-	for (int i = 0;i < s.size;i++)
-	{
-		printf("%d ",s.arr[i]);
-	}
-	printf("\n");
-}
+//void SLPrint(SL s)
+//{
+//	for (int i = 0;i < s.size;i++)
+//	{
+//		printf("%d ",s.arr[i]);
+//	}
+//	printf("\n");
+//}
 
 //销毁
 void SLDestroy(SL* ps)
