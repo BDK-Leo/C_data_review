@@ -162,5 +162,6 @@ void ContactSave(Contact* con)
 
 void ContactDestroy(Contact* con)
 {
+	ContactSave(con);
 	SLDestroy(con);
 }
