@@ -3,11 +3,6 @@
 #include"SeqList.h"
 #include<string.h>
 
-void ContactInit(Contact* con)
-{
-	SLInit(con);
-}
-
 void LoadContact(Contact* con)
 {
 	//打开文件
@@ -25,6 +20,12 @@ void LoadContact(Contact* con)
 		SLPushBack(con, info);
 	}
 	printf("历史数据导入通讯录成功！\n");
+}
+
+void ContactInit(Contact* con)
+{
+	SLInit(con);
+	//LoadContact(con);
 }
 
 void ContactAdd(Contact* con)
