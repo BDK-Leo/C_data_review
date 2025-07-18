@@ -32,4 +32,3 @@ void LoadContact(Contact* con);
 void ContactDel(Contact* con);
 
 void ContactDestroy(Contact* con);
-
