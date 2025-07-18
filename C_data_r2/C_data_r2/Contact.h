@@ -33,7 +33,3 @@ void ContactDel(Contact* con);
 
 void ContactDestroy(Contact* con);
 
-
-
-
-
