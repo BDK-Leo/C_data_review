@@ -1,5 +1,4 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS 1
-
 #include"Contact.h"
 #include"SeqList.h"
 #include<string.h>
