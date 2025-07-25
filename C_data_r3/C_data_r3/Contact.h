@@ -1,5 +1,4 @@
 ﻿#pragma once
-#pragma once
 #define NAME_MAX 20
 #define GENDER_MAX 2
 #define TEL_MAX 20
