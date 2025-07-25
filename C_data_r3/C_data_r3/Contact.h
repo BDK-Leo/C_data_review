@@ -4,7 +4,6 @@
 #define TEL_MAX 20
 #define ADDR_MAX 20
 
-
 typedef struct PersonInfo
 {
 	char name[NAME_MAX];
